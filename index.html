@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TotoCarpet</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: sans-serif;
@@ -19,44 +18,74 @@
       padding: 1em;
       text-align: center;
     }
-    .contacts-bar {
-      background: #777;
+    .contact-bar {
+      background-color: #888;
       color: white;
-      padding: 0.5em 1em;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 0.95em;
       flex-wrap: wrap;
-      font-size: 0.9em;
     }
-    .contacts-left i,
-    .contacts-right i {
-      margin-right: 0.5em;
-    }
-    .contacts-left, .contacts-right {
-      display: flex;
-      align-items: center;
-      gap: 1em;
-    }
-    .category-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      margin: 1.5em auto 0.5em;
-    }
-    .category-buttons a {
-      background: #444;
-      color: #fff;
-      padding: 0.6em 1.2em;
+    .contact-bar a {
+      color: white;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
+      margin: 0 5px;
     }
-    .page-title {
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+    .contact-left, .contact-right {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .catalog {
+      padding: 2em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .product {
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 1em;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .gallery a {
+      width: 48%;
+    }
+    .order-button {
+      display: block;
+      text-align: center;
+      margin: 30px 0;
+    }
+    .order-button a {
+      background-color: #8f5db7;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+    }
+    .order-button a:hover {
+      background-color: #7e4fa3;
     }
   </style>
 </head>
@@ -66,24 +95,389 @@
     <p>Килими з характером</p>
   </header>
 
-  <div class="contacts-bar">
-    <div class="contacts-left">
-      <i class="fas fa-phone"></i> +38 (096) 133 27 77
-      <i class="fas fa-envelope"></i> totocarpet@outlook.com
+  <div class="contact-bar">
+    <div class="contact-left">
+      📞 <a href="tel:+380961332777">+38 (096) 133 27 77</a> |
+      📩 <a href="mailto:totocarpet@outlook.com">totocarpet@outlook.com</a>
     </div>
-    <div class="contacts-right">
-      <i class="fas fa-comment-alt"></i> <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv" style="color:white">Viber</a> |
-      <a href="#" style="color:white">Instagram</a> |
-      <a href="#" style="color:white">Facebook</a> |
-      <a href="#" style="color:white">TikTok</a>
+    <div class="contact-right">
+      💬 
+      <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv" target="_blank">Viber</a> |
+      <a href="https://instagram.com/" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/" target="_blank">Facebook</a> |
+      <a href="https://tiktok.com/" target="_blank">TikTok</a>
     </div>
   </div>
 
-  <div class="category-buttons">
-    <a href="index.html">Без дефектів</a>
-    <a href="defected.html">З дефектами</a>
+  <main class="catalog">
+    
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 1"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 1 додаткове"></a>
+      </div>
+      <h3>Килим 1</h3>
+      <p>Опис килима 1</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1210 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 2"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 2 додаткове"></a>
+      </div>
+      <h3>Килим 2</h3>
+      <p>Опис килима 2</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1220 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 3"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 3 додаткове"></a>
+      </div>
+      <h3>Килим 3</h3>
+      <p>Опис килима 3</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1230 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 4"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 4 додаткове"></a>
+      </div>
+      <h3>Килим 4</h3>
+      <p>Опис килима 4</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1240 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 5"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 5 додаткове"></a>
+      </div>
+      <h3>Килим 5</h3>
+      <p>Опис килима 5</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1250 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 6"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 6 додаткове"></a>
+      </div>
+      <h3>Килим 6</h3>
+      <p>Опис килима 6</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1260 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 7"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 7 додаткове"></a>
+      </div>
+      <h3>Килим 7</h3>
+      <p>Опис килима 7</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1270 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 8"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 8 додаткове"></a>
+      </div>
+      <h3>Килим 8</h3>
+      <p>Опис килима 8</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1280 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 9"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 9 додаткове"></a>
+      </div>
+      <h3>Килим 9</h3>
+      <p>Опис килима 9</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1290 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 10"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 10 додаткове"></a>
+      </div>
+      <h3>Килим 10</h3>
+      <p>Опис килима 10</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1300 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 11"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 11 додаткове"></a>
+      </div>
+      <h3>Килим 11</h3>
+      <p>Опис килима 11</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1310 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 12"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 12 додаткове"></a>
+      </div>
+      <h3>Килим 12</h3>
+      <p>Опис килима 12</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1320 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 13"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 13 додаткове"></a>
+      </div>
+      <h3>Килим 13</h3>
+      <p>Опис килима 13</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1330 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 14"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 14 додаткове"></a>
+      </div>
+      <h3>Килим 14</h3>
+      <p>Опис килима 14</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1340 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 15"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 15 додаткове"></a>
+      </div>
+      <h3>Килим 15</h3>
+      <p>Опис килима 15</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1350 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 16"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 16 додаткове"></a>
+      </div>
+      <h3>Килим 16</h3>
+      <p>Опис килима 16</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1360 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 17"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 17 додаткове"></a>
+      </div>
+      <h3>Килим 17</h3>
+      <p>Опис килима 17</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1370 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 18"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 18 додаткове"></a>
+      </div>
+      <h3>Килим 18</h3>
+      <p>Опис килима 18</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1380 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 19"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 19 додаткове"></a>
+      </div>
+      <h3>Килим 19</h3>
+      <p>Опис килима 19</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1390 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 20"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 20 додаткове"></a>
+      </div>
+      <h3>Килим 20</h3>
+      <p>Опис килима 20</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1400 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 21"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 21 додаткове"></a>
+      </div>
+      <h3>Килим 21</h3>
+      <p>Опис килима 21</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1410 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 22"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 22 додаткове"></a>
+      </div>
+      <h3>Килим 22</h3>
+      <p>Опис килима 22</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1420 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 23"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 23 додаткове"></a>
+      </div>
+      <h3>Килим 23</h3>
+      <p>Опис килима 23</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1430 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 24"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 24 додаткове"></a>
+      </div>
+      <h3>Килим 24</h3>
+      <p>Опис килима 24</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1440 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 25"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 25 додаткове"></a>
+      </div>
+      <h3>Килим 25</h3>
+      <p>Опис килима 25</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1450 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 26"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 26 додаткове"></a>
+      </div>
+      <h3>Килим 26</h3>
+      <p>Опис килима 26</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1460 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 27"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 27 додаткове"></a>
+      </div>
+      <h3>Килим 27</h3>
+      <p>Опис килима 27</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1470 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 28"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 28 додаткове"></a>
+      </div>
+      <h3>Килим 28</h3>
+      <p>Опис килима 28</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1480 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 29"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 29 додаткове"></a>
+      </div>
+      <h3>Килим 29</h3>
+      <p>Опис килима 29</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1490 грн</p>
+    </div>
+
+
+    <div class="product">
+      <div class="gallery">
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 30"></a>
+        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Килим 30 додаткове"></a>
+      </div>
+      <h3>Килим 30</h3>
+      <p>Опис килима 30</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1500 грн</p>
+    </div>
+
+  </main>
+
+  <div class="order-button">
+    <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv" target="_blank">Замовити</a>
   </div>
 
-  <div class="page-title">Килими з дефектами</div>
+  <footer>
+    <p>&copy; 2025 TotoCarpet</p>
+  </footer>
 </body>
 </html>

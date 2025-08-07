@@ -7,45 +7,6 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f8f8;
-  }
-  header, footer {
-    background: #222;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-  }
-   .contact-bar {
-    background-color: #ccc;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-size: 0.95em;
-  }
-
-  .contact-bar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-  }
-
-  .contact-bar a:hover {
-    text-decoration: underline;
-  }
-
-  .contact-left, .contact-right {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-    .catalog {
-    padding: 2em;
-    body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
@@ -57,106 +18,80 @@
       padding: 1em;
       text-align: center;
     }
+    .contact-bar {
+      background-color: #888;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 0.95em;
+      flex-wrap: wrap;
+    }
+    .contact-bar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+    .contact-left, .contact-right {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
     .catalog {
       padding: 2em;
-    }
-    .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1em;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
     .product {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: white;
       padding: 1em;
       border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
     }
     .product img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-    }
-    .contact {
-      padding: 2em;
-      background: #eee;
-    }
-    form label {
-      display: block;
-      margin-bottom: 1em;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.5em;
-      margin-top: 0.5em;
-    }
-    button {
-      padding: 0.7em 1.5em;
-      background: #222;
-      color: #fff;
-      border: none;
-      cursor: pointer;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>TotoCarpet</h1>
-    <p>Килими з характером</p>
   </header>
-<div class="contact-bar">
-  <div class="contact-left">
-    📞 <a href="tel:+380961332777">+38 (096) 133 27 77</a> |
-    📩 <a href="mailto:totocarpet@outlook.com">totocarpet@outlook.com</a>
-  </div>
-  <div class="contact-right">
-    💬 
-    <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv" target="_blank">Viber</a> |
-    <a href="https://instagram.com/" target="_blank">Instagram</a> |
-    <a href="https://facebook.com/" target="_blank">Facebook</a> |
-    <a href="https://tiktok.com/" target="_blank">TikTok</a>
-  </div>
-</div>
-  <main>
-    <section class="catalog">
-      <h2>Наші килими</h2>
-      <div id="products" class="product-grid"></div>
-    </section>
 
-    <section class="contact">
-      <h2>Зробити замовлення</h2>
-      <form action="https://formspree.io/f/your-id" method="POST">
-        <label>Ім’я:<br><input type="text" name="name" required></label><br>
-        <label>Телефон:<br><input type="tel" name="phone" required></label><br>
-        <label>Viber/Instagram/Facebook/TikTok:<br>
-          <input type="text" name="socials" placeholder="@yourhandle або номер">
-        </label><br>
-        <label>Що вас цікавить:<br><textarea name="message" required></textarea></label><br>
-        <button type="submit">Надіслати</button>
-      </form>
-    </section>
+  <div class="contact-bar">
+    <div class="contact-left">
+      📞 <a href="tel:+380961332777">+38 (096) 133 27 77</a> |
+      📩 <a href="mailto:totocarpet@outlook.com">totocarpet@outlook.com</a>
+    </div>
+    <div class="contact-right">
+      💬 
+      <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv" target="_blank">Viber</a> |
+      <a href="https://instagram.com/" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/" target="_blank">Facebook</a> |
+      <a href="https://tiktok.com/" target="_blank">TikTok</a>
+    </div>
+  </div>
+
+  <main class="catalog">
+    <div class="product">
+      <img src="images/1.jpg" alt="Килим 1">
+      <h3>Килим</h3>
+      <p>Килим поєднання ворс-безворс</p>
+      <p><strong>Розмір:</strong> 160x230 см</p>
+      <p><strong>Ціна:</strong> 1200 грн</p>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 TotoCarpet</p>
   </footer>
-
-  <script>
-    fetch('products.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('products');
-        data.forEach(product => {
-          const el = document.createElement('div');
-          el.className = 'product';
-          el.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" />
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p><strong>Розмір:</strong> ${product.size}</p>
-            <strong>${product.price} грн</strong>
-          `;
-          container.appendChild(el);
-        });
-      });
-  </script>
 </body>
 </html>

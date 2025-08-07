@@ -4,7 +4,7 @@
     "description": "Килим поєднання ворс-безворс",
     "size": "160x230 см",
     "price": "1200",
-    <img src="images/c3e63ea1931d751947dc98926c719ca0-V.jpg" alt="Килим 1" width="300">
+    "image": "https://images.unsplash.com/IMG-c3e63ea1931d751947dc98926c719ca0-V.jpg"
   },
   {
     "name": "Килим",

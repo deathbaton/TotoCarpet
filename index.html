@@ -44,7 +44,7 @@
     .catalog {
       padding: 2em;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
     }
     .product {
@@ -55,16 +55,68 @@
       text-align: center;
     }
     .product img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+    }
+    .order-button {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .order-button a {
+      background-color: #8f5db7;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+    }
+    .order-button a:hover {
+      background-color: #7e4fa3;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>TotoCarpet</h1>
-  </header>
+  <header><h1>TotoCarpet</h1></header>
 
   <div class="contact-bar">
     <div class="contact-left">
@@ -82,24 +134,56 @@
 
   <main class="catalog">
     <div class="product">
-      <img src="images/1.jpg" alt="Килим 1">
-      <h3>Килим</h3>
+      <img src="images/1.jpg" alt="Килим 1" onclick="openLightbox('images/1.jpg')">
+      <h3>Килим 1</h3>
       <p>Килим поєднання ворс-безворс</p>
       <p><strong>Розмір:</strong> 160x230 см</p>
       <p><strong>Ціна:</strong> 1200 грн</p>
+      <div class="gallery">
+        <img src="images/1.jpg" onclick="openLightbox('images/1.jpg')">
+        <img src="images/1.jpg" onclick="openLightbox('images/1.jpg')">
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/1.jpg" alt="Килим 2" onclick="openLightbox('images/1.jpg')">
+      <h3>Килим 2</h3>
+      <p>Сучасний дизайн, легко миється</p>
+      <p><strong>Розмір:</strong> 140x200 см</p>
+      <p><strong>Ціна:</strong> 1000 грн</p>
+      <div class="gallery">
+        <img src="images/1.jpg" onclick="openLightbox('images/1.jpg')">
+        <img src="images/1.jpg" onclick="openLightbox('images/1.jpg')">
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/1.jpg" alt="Килим 3" onclick="openLightbox('images/1.jpg')">
+      <h3>Килим 3</h3>
+      <p>Традиційний орнамент</p>
+      <p><strong>Розмір:</strong> 180x250 см</p>
+      <p><strong>Ціна:</strong> 1500 грн</p>
+      <div class="gallery">
+        <img src="images/1.jpg" onclick="openLightbox('images/1.jpg')">
+        <img src="images/1.jpg" onclick="openLightbox('images/1.jpg')">
+      </div>
     </div>
   </main>
 
-    <div style="text-align: center; margin-top: 20px;">
-    <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv"
-       target="_blank"
-       style="background-color: #8f5db7; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
-      Замовити
-    </a>
+  <div class="order-button">
+    <a href="https://invite.viber.com/?g2=AQBwpiLNVefu3FJ%2B6U622TmaSbbuwFvjhaH9b3XlZEslr3BDXVVaQGqRgXhA2QDv" target="_blank">Замовити</a>
   </div>
 
-  <footer>
-    <p>&copy; 2025 TotoCarpet</p>
-  </footer>
+  <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <footer><p>&copy; 2025 TotoCarpet</p></footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox').style.display = 'block';
+      document.getElementById('lightbox-img').src = src;
+    }
+  </script>
 </body>
 </html>

@@ -4,20 +4,20 @@
     "description": "Килим поєднання ворс-безворс",
     "size": "160x230 см",
     "price": "1200",
-    "image": "images/1.jpg"
+    "image": "images/Aksi 38525-100.jpg"
   },
   {
     "name": "Килим",
     "description": "Килим поєднання ворс-безворс",
     "size": "160x230 см",
     "price": "1200",
-    "image": "https://images.unsplash.com/photo-1598300056510-5e69cdd8c58b"
+    "image": "images/Aksi 38540-100 .jpg"
   },
   {
     "name": "Доріжка",
     "description": "Середній ворс",
     "size": "80 см",
     "price": "300",
-    "image": "https://images.unsplash.com/photo-1630696892980-8cb68ae7f20a"
+    "image": "images/2.jpg"
   }
 ]

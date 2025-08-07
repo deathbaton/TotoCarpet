@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TotoCarpet</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+    header, footer {
+      background: #222;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    .catalog {
+      padding: 2em;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1em;
+    }
+    .product {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .contact {
+      padding: 2em;
+      background: #eee;
+    }
+    form label {
+      display: block;
+      margin-bottom: 1em;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+    }
+    button {
+      padding: 0.7em 1.5em;
+      background: #222;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TotoCarpet</h1>
+    <p>Килими з характером</p>
+  </header>
+
+  <main>
+    <section class="catalog">
+      <h2>Наші килими</h2>
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section class="contact">
+      <h2>Зробити замовлення</h2>
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <label>Ім’я:<br><input type="text" name="name" required></label><br>
+        <label>Телефон:<br><input type="tel" name="phone" required></label><br>
+        <label>Viber/Instagram/Facebook/TikTok:<br>
+          <input type="text" name="socials" placeholder="@yourhandle або номер">
+        </label><br>
+        <label>Що вас цікавить:<br><textarea name="message" required></textarea></label><br>
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TotoCarpet</p>
+  </footer>
+
+  <script>
+    fetch('products.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('products');
+        data.forEach(product => {
+          const el = document.createElement('div');
+          el.className = 'product';
+          el.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p><strong>Розмір:</strong> ${product.size}</p>
+            <strong>${product.price} грн</strong>
+          `;
+          container.appendChild(el);
+        });
+      });
+  </script>
+</body>
+</html>

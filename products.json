@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Килим Persian Classic",
+    "description": "Класичний перський килим ручної роботи",
+    "size": "200x300 см",
+    "price": "4500",
+    "image": "https://images.unsplash.com/photo-1582582482552-4d3d1a3a0baf"
+  },
+  {
+    "name": "Килим Boho Style",
+    "description": "Сучасний килим у стилі бохо з бахромою",
+    "size": "160x230 см",
+    "price": "2600",
+    "image": "https://images.unsplash.com/photo-1598300056510-5e69cdd8c58b"
+  },
+  {
+    "name": "Килим Modern Grey",
+    "description": "Мінімалістичний сірий килим для сучасного інтер'єру",
+    "size": "140x200 см",
+    "price": "2100",
+    "image": "https://images.unsplash.com/photo-1630696892980-8cb68ae7f20a"
+  }
+]
